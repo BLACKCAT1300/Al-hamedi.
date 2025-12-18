@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <title>Family Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="welcome-body">
+
+    <div class="welcome-box">
+        <h1>هل أنت عضو في العائلة؟</h1>
+
+        <div class="buttons">
+            <!-- زر نعم -->
+            <a href="family.html" class="btn yes">نعم</a>
+
+            <!-- زر لا -->
+            <button class="btn no" onclick="showMessage()">لا</button>
+        </div>
+        <!-- رسالة زر لا (مخفية افتراضياً) -->
+        <p id="noMessage">
+            🚫 عذرًا، هذه الصفحة مخصصة لأفراد العائلة فقط
+        </p>
+    </div>
+
+    <script>
+        function showMessage() {
+            const msg = document.getElementById("noMessage");
+            msg.classList.add("show-message");
+        }
+    </script>
+
+</body>
+</html>
